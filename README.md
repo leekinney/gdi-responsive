@@ -1,6 +1,6 @@
 # Responsive Web Design
 
-This is the Girl Develop It Responsive Web Design course. Materials by Catherine Farman.
+This is the Girl Develop It Responsive Web Design course. Materials by Catherine Farman, based on material by Sophie Shepherd.
 
 The course is meant to be taught in 4 two-hour sections. Each of the slides and practice files are customizable according to the needs of a given class or audience.
 
@@ -28,9 +28,15 @@ Students will work on building out a responsive navigation menu using HTML, CSS 
 ### Class 3
 Goal for this class: learn how to build common responsive design elements like tables and forms.
 
+#### Part 1: Responsive Tables
+#### Part 2: Responsive Forms
 
 ### Class 4
-Goal for this class: learn how to build common responsive design elements like tables and forms.
+Goal for this class: optimize your site for performance and a mobile-first experience.
+
+#### Part 1: Mobile First
+#### Part 2: Page Speed
+
 
 ## Theme customization
 
