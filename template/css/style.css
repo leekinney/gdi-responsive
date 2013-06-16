@@ -177,7 +177,7 @@ body {
 header {
 	padding: 15px 0 0;
 	background: #0580C3;
-	border-top: 14px solid #A0195B;
+	border-top: 10px solid #A0195B;
 }
 
 	header .description {
@@ -337,31 +337,6 @@ footer {
 				}
 
 
-/* Large screen styles */
-
-/*@media only screen and (min-width:600px) {
-
-header, div[role="main"], footer {
-max-width:775px;
-}
-
-
-}*/
-
-
-/* Small screen styles */
-
-/*@media only screen and (max-width:600px) {
-
-header, div[role="main"], footer {
-	width:99%;
-}
-
-img {
-	max-width: 100% !important;
-}
-
-}*/
 
 /* Print Styles */
 
