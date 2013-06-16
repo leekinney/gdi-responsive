@@ -184,11 +184,9 @@
             Create a page that changes when you resize the browser viewport, and that fits on a mobile device screen.
           </div>
           <ul>
-            <li><a href="images/design.jpg">images/design.jpg</a></li>
-            <li><a href="images/design.psd">images/design.psd</a></li>
-            <li><a href="template/index.html">template/index.html</a></li>
-            <li><a href="template/css/style.css">template/css/style.css</a></li>
-            <li>TODO<a href="http://cfarm.co/gdiresponsivetemplate">Download these template files http://cfarm.co/gdiresponsivetemplate</a></li>
+            <li><a href="http://cfarman.com/gdi-rwd-slides/images/design.jpg">design.jpg</a></li>
+            <li><a href="http://cfarman.com/gdi-rwd-slides/images/design.psd">design.psd</a></li>
+            <li><a href="http://cfarm.co/rwdtemplate">Download template files (<u>cfarm.co/rwdtemplate</u>)</a></li>
           </ul>
         </section>
         
@@ -401,14 +399,10 @@ class="small-image"&gt;
         </section>
 
         <section>
-          <h3>Fluid Grid Tip!</h3>
+          <h3>Fluid Grid Problem!</h3>
           <p>Sometimes our fluid grids are too small to fit our content nicely in our design at small screen sizes:</p>
-          TODO: img screenshot of squished kitten grid!
-
-          <p>We can fix this! Simply <strong>clear</strong> your floats. This is where media queries come in:</p>
-          TODO: code example
+          <img src="images/squishedgrid.png" alt="Squished grid is too squished">
         </section>
-
 
         <section>
           <h3>Media Queries</h3>
@@ -451,6 +445,27 @@ class="small-image"&gt;
 @media only screen and (min-width:960px) {
   .container { 
     max-width: 960px;
+  }
+}
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Let's Develop It</h3>
+          <p class="left-align">Fix your squished grid styles:</p>
+          <ul>
+            <li>Move your width and float styles inside a media query</li>
+            <li>Fix styles as needed for your 'default' CSS</li>
+          </ul>
+          <pre><code class ="css">.callout {
+  margin: 0 auto;
+  width: ???;
+}
+@media only screen and (min-width:960px) {
+  .callout { 
+    margin: 0 ??% 0 0;
+    width: ???%;
+    float: left;
   }
 }
 </code></pre>
