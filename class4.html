@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Class 1 (Responsive Web Design, Girl Develop IT)</title>
+		<title>Class 4 (Responsive Web Design, Girl Develop IT)</title>
 
 		<meta name="description" content="This is the Girl Develop It Responsive Web Design course. Materials by Catherine Farman, based on material by Sophie Shepherd.
 
@@ -42,13 +42,13 @@
         <section>
           <img src = "images/gdi_logo_badge.png" class="badge">
           <h3>Responsive Web Design</h3>
-          <h4>Class 1</h4>
+          <h4>Class 4</h4>
         </section>
 
         <!-- Opening slide -->
         <section>
-          <h3>Download Class 1 Files:</h3>
-          <p class="blue" style="font-size: 3em; text-decoration: underline;">cfarm.co/rwd1</p>
+          <h3>Class 4 Slides:</h3>
+          <p class="blue" style="font-size: 3em; text-decoration: underline;">cfarm.co/rwd4</p>
         </section>
 
 
@@ -69,14 +69,21 @@
         </section>
 
         <section>
-          <h3>Welcome!</h3>
+          <h3>Performance</h3>
           <div class = "left-align">
-          <p>I'm Catherine Farman</p>
+          <p class="left-align">Best Practices for Mobile Performance from W3C</p>
           <ul>
-            <li>Front End Developer at WebLinc in Old City</li>
-            <li>I write HTML, CSS and Javascript for eCommerce sites</li>
-            <li>Some of our clients are Free People, BHLDN, Sanrio, The Sak, Brooklyn Industries, The Strand Bookstore...</li>
-            <li>Responsive sites I've worked on are <a href="http://eataly.com">Eataly</a>, <a href="http://c21stores.com">Century 21 Department Stores</a>, and <a href="http://yarn.com">Yarn.com</a></li>
+            <li>
+              Keep the number of externally linked resources to a minimum. Each linked resource (images, style sheets and other objects) requires a separate request across the network. This may add significantly to the load time of the page in the mobile context.
+              <br>
+              Solution: Use Sprites for images, minify & combine CSS, minify & combine JS
+            </li>
+            <li>
+              Limit content to what the user has requested.
+              Mobile users often pay for bandwidth, so offering them content that is extraneous to their needs, especially advertising, costs them time and money and contributes to an unsatisfactory experience. In general, the user's consent should be sought before initiating the download of content.
+              *if hiding content, use appropriate methods to NOT load the content if it's not going to be useful for mobile user*
+              *P.S. if it's not useful for a mobile user, it's probably not useful for anyone. consider getting rid of it for ALL devices*
+            </li>
           </ul>
           </div>
         </section>
