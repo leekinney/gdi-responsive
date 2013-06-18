@@ -1,0 +1,39 @@
+// Default mixins and settings -----------------
+@import "_mixins";
+@import "_settings";
+// ---------------------------------------------
+
+//butt
+// Override theme settings (see ../template/settings.scss)
+$mainColor: #333;
+$headingLetterSpacing: -0.08em;
+$headingTextShadow: none;
+$backgroundColor: #f7fbfc;
+$linkColor: #0091c9;
+$selectionBackgroundColor: #134674;
+
+// Background generator
+@mixin bodyBackground() {
+	@include radial-gradient( lighten(#EDAB23, 40% ), #f7fbfc );
+}
+
+// Override reveal.css
+.green {
+	color: #009a89;
+}
+.blue {
+	color: #0000ff;
+}
+.yellow {
+	color: #da7d2e;
+}
+a {
+	text-decoration: underline !important;
+}
+h4, h6 {
+	color: lighten($headingColor, 8%) !important;
+}
+
+// Theme template ------------------------------
+@import "_theme";
+// ---------------------------------------------
