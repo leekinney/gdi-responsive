@@ -279,6 +279,85 @@
           </ul>
         </section>
 
+        <!-- Breakpoints -->
+
+        <section>
+          <h3>Breakpoints</h3>
+          <p class="left-align">The points in your layout where you add a media query, or where things shift and change.</p>
+          <pre><code class ="css">/* this is a 60em or 960px wide breakpoint */
+@media only screen and (min-width:60em) { 
+  .container { 
+    width: 100%;
+    max-width: 960px;
+  }
+}
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Breakpoints</h3>
+          <p class="left-align">These can be based on popular device sizes, like iPhone, iPad and desktop resolutions:</p>
+          <pre><code class ="css">.container { width: 100%; }
+@media only screen and (min-width:320px) { 
+  .container { 
+    margin: 0 auto;
+    width: 320px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .container {
+    width: 960px;
+  }
+}
+</code></pre>
+<p class="left">Example: <a href="http://www.eataly.com/">Eataly</a></p>
+        </section>
+
+                <section>
+          <h3>Breakpoints</h3>
+          <p class="left-align">Breakpoints can also be more fluid, and added only where the layout starts to look funky:</p>
+          <pre><code class ="css">.hero-image { width: 100%; }
+@media only screen and (min-width:530px) { 
+  .container { 
+    float: left;
+    width: 41.6666666666667%; /* 400px/960px */;
+  }
+}
+</code></pre>
+<p class="left-align">Example: <a href="http://bohconf.com/">BohConf</a></p>
+        </section>
+
+        <!-- Let's Develop It -->
+        <section>
+          <h3>Let's Develop It</h3>
+          <ul>
+            <li>Add media queries for breakpoints that are the size of popular mobile devices (phones, tablets, etc)</li>
+            <li>Look up these screen resolutions - try looking up your own devices</li>
+            <li>Try changing the widths at these breakpoints to mimic the rigid grid layouts we looked at.</li>
+            <li>Helpful tools:
+              <ul>
+                <li>
+                  <a href="http://responsivepx.com/">Breakpoint Finder</a> - works on local sites
+                </li>
+                <li>
+                  <a href="http://www.josscrowcroft.com/2011/code/window-size-bookmarklet/">Window Size Bookmarklet</a>
+                </li>
+                <li>
+                  <a href="http://www.responsinator.com/">Responsinator</a> - mimics real device sizes
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+        </section>
+
+
+
         <section>
           <h3>Media Queries for Screen Resolution</h3>
           <p>Some computers have different resolution density. You can <a href="http://css-tricks.com/snippets/css/retina-display-media-query/">target displays on iPhones and iPads</a>, for example:</p>
@@ -310,53 +389,15 @@
           <ul>
             <li>Add a retina (2x) media query to your CSS to change the logo image.</li>
             <li>Remember to change the background-size value!</li>
-            <li>Media query breakpoints should also happen wherever your layout starts to break or look weird</li>
-            <li>Helpful tools:
-              <ul>
-                <li>
-                  <a href="http://responsivepx.com/">Breakpoint Finder</a>
-                </li>
-                <li>
-                  <a href="http://www.josscrowcroft.com/2011/code/window-size-bookmarklet/">Window Size Bookmarklet</a>
-                </li>
-                <li>
-                  <a href="http://www.responsinator.com/">Responsinator</a> - mimics real device sizes
-                </li>
-              </ul>
-            </li>
           </ul>
 
         </section>
 
-         <!-- Let's Develop It -->
-        <section>
-          <h3>Let's Develop It</h3>
-          <ul>
-            <li>Add media queries for breakpoints that are the size of popular mobile devices (phones, tablets, etc)</li>
-            <li>Look up these screen resolutions - try looking up your own devices</li>
-            <li>Add media query breakpoints wherever your layout starts to break or look weird</li>
-            <li>Change styles for font sizes, padding, widths, whatever you think makes your page more readable and usable.</li>
-            <li>Helpful tools:
-              <ul>
-                <li>
-                  <a href="http://responsivepx.com/">Breakpoint Finder</a>
-                </li>
-                <li>
-                  <a href="http://www.josscrowcroft.com/2011/code/window-size-bookmarklet/">Window Size Bookmarklet</a>
-                </li>
-                <li>
-                  <a href="http://www.responsinator.com/">Responsinator</a> - mimics real device sizes
-                </li>
-              </ul>
-            </li>
-          </ul>
-
-        </section>
-
+ 
 
         <!-- Part 2 of Class 2: Responsive Design Best Practices -->
         <section>
-         <h1>Part 2: Best Practices</h1>
+         <h1>Best Practices</h1>
        </section>        
 
         <!-- Terms-->
@@ -370,8 +411,6 @@
            <li>
             <div class = "blue">Design Pattern</div>
             <div>Describe solutions to common usability or accessibility problems in a specific context<a href="http://en.wikipedia.org/wiki/Interaction_design_pattern">(Wikipedia)</a></div>
-           </li>
-           <li>
            </li>
          </ul>
         </section>        
@@ -452,128 +491,28 @@
           <a href="images/grist_headline.png" title=""><img src="images/grist_headline.png" alt="" width=300></a>
         </section>
 
-        <!-- W3C Navigation Best Practices for Mobile Web Design -->
+        <!-- Let's Develop It -->
         <section>
-          <h3>Mobile Web Design</h3>
-          <p class="left-align"><a href="http://www.w3.org/TR/mobile-bp/#bpgroupnavlinks">Navigation Best practices recommended by the W3C</a>:</p>
+          <h3>Homework</h3>
           <ul>
-            <li>
-              Provide only minimal navigation at the top of the page.
-            </li>  
-            <li>
-              Provide consistent navigation mechanisms.
-            </li>        
-            <li>
-              Clearly identify the target of each link (e.g. no use of "Click here").
-            </li>         
-            <li>
-              Do not change the current window without informing the user.
+            <li>Add media query breakpoints wherever your layout starts to break or look weird</li>
+            <li>Keep in mind mobile web design best practices to find elements that need to change. Change styles for navigation, font sizes, padding, widths, whatever you think makes your page more readable and usable.</li>
+            <li>Helpful tools:
+              <ul>
+                <li>
+                  <a href="http://responsivepx.com/">Breakpoint Finder</a> - works on local sites
+                </li>
+                <li>
+                  <a href="http://www.josscrowcroft.com/2011/code/window-size-bookmarklet/">Window Size Bookmarklet</a>
+                </li>
+                <li>
+                  <a href="http://www.responsinator.com/">Responsinator</a> - mimics real device sizes
+                </li>
+              </ul>
             </li>
           </ul>
-        </section>
-
-        <section>
-          <h4>Provide only minimal navigation at the top of the page</h4>
-          <a href="images/texas_tribune.png" title=""><img src="images/texas_tribune.png" alt="" width=350></a>
-          <a href="images/lifehacker_nav.png" title=""><img src="images/lifehacker_nav.png" alt="" width=350></a>
-        </section>        
-
-        <section>
-          <h4>Provide consistent navigation mechanisms</h4>
-          <a href="images/brooklyn_museum.png" title=""><img src="images/brooklyn_museum.png" alt="" width=250></a>
-          <a href="images/brooklyn_museum2.png" title=""><img src="images/brooklyn_museum2.png" alt="" width=250></a>      
-          <a href="images/brooklyn_museum3.png" title=""><img src="images/brooklyn_museum3.png" alt="" width=250></a>          
 
         </section>
-
-
-        <!-- Navigation Patterns -->
-        <section>
-          <h3>Navigation Patterns</h3>
-          <div class="left-align">
-          <ul>
-            <li>Nav bar</li>
-            <li>Select dropdown</li>
-            <li>Toggle</li>
-            <li>Off Canvas</li>
-            <li>Touch Screen Fat Finger http://www.uxbooth.com/articles/considerations-for-mobile-design-part-3-behavior/</li>
-          </ul>
-        </div>
-          <cite><a href="http://bradfrostweb.com/blog/web/responsive-nav-patterns/">(Responsive Nav Patterns)</a></cite>
-
-        </section>
-
-
-        <!-- Navigation Patterns -->
-        <section>
-          <h3>Navigating for Touch Devices</h3>
-          <div class="left-align">
-
-          <ul>
-            <li>Touch Screen Fat Finger </li>
-            <li>min-height and width recommended: 44px</li>
-          </ul>
-        </div>
-
-          <cite><a href="http://www.uxbooth.com/articles/considerations-for-mobile-design-part-3-behavior/">(Considerations for Mobile Design [Part 3: Behavior])</a></cite>
-
-        </section>
-        
-
-        
-        <!-- Exercise-->
-        <section>
-          <h3>Let's Develop It</h3>
-          <p>Create a new html file</p>
-          <p>Save it in our <span class="blue">/gdiJS/</span> folder</p>
-          <pre><code class ="html">
-&lt;html>
-  &lt;head>
-    &lt;title>My Site!&lt;/title>
-  &lt;/head>
-  &lt;body>
-    My site!
-  &lt;/body>
-&lt;/html>
-</code></pre>
-        </section>
-        
-        <section>
-          <h3>Let's Develop It</h3>
-          <p>Create a new javascript file (a file that ends in .js)</p>
-          <p>Link it to your html file</p>
-          <pre><code class ="html">
-&lt;html>
-  &lt;head>
-    &lt;title>My Site!&lt;/title>
-    &lt;script src="myjavascriptfile.js">&lt;/script>
-  &lt;/head>
-  &lt;body>
-    My site!
-  &lt;/body>
-&lt;/html>
-</code></pre>
-        </section>
-        
-        <section>
-          <h3>Let's Develop It</h3>
-          <h4>Lifetime Supply Calculator</h4>
-          <p>Ever wonder how much a lifetime supply of your favorite snack or drink is?</p>
-          <ul>
-            <li>Store your age in a variable</li>
-            <li>Store your maximum in a variable</li>
-            <li>Store an estimated amount per day in a variable</li>
-            <li>Calculate how many you would eat/drink for the rest of your life.</li>
-            <li>Output the result in an alert(see below) like so: "You will need X _____s to last you until your old age of N"</li>
-          </ul>
-          
-          <pre><code contenteditable class ="javascript">
-          alert(answer);
-</code></pre>
-          
-        </section>
-        
-
 
         <!-- -->
         <section>
