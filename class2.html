@@ -59,8 +59,8 @@
           <ul>
             <li>A Fluid Grid</li>
             <li>Flexible Images</li>
-            <li>Media Queries</li>
             <li>Viewport Meta Tag</li>
+            <li><span class="blue">Media Queries</span></li>
           </ul>
         </section>
 
@@ -90,7 +90,7 @@
                 <li class="left-align">Scale</li>
                 <li class="left-align">Height</li>
               </ol>
-           <p class="green left-align fragment">A: Scale</p>
+           <p class="green left-align fragment">A: C. Scale</p>
           </ul>
         </section>     
 
@@ -115,6 +115,35 @@
         </section>
 
         <section>
+          <h3>Max Width Styles</h3>
+          <p class="left-align">For many responsive styles, you  want to impose a maximum width on your elements that have percentage values:</p>
+          <pre><code class ="css">.gifs img {
+  width: 33%;
+  max-width: 85px;
+}
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Let's Develop It</h3>
+          <ul class="left-align">
+            <li>Add max-width values to your elements with percentages.</li>
+            <li>Hint: Use your old <strong>pixel width values</strong> for your max-width values. (Aren't you glad you kept those in a comment?)</li>
+          </ul>
+
+          <pre><code class ="css">.gifs img {
+  width: 33%;
+  max-width: 85px;
+}
+.container {
+  width: 100%;
+  max-width: 960px;
+}
+</code></pre>
+        </section>
+
+
+        <section>
           <h3>Fluid Video, etc.</h3>
           <ul>
             <li>Video, slideshows, etc can also be made flexible</li>
@@ -132,7 +161,7 @@
 
         <section>
           <h3>Media Queries</h3>
-          <p>Media Queries apply CSS based on conditions that you decide (usually width, but can also be resolution, device size, height, media type).</p>
+          <p class="left-align"><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries">Media Queries</a> apply CSS based on conditions that you decide (usually width, but can also be resolution, device size, height, media type).</p>
           <pre><code class ="css">@media print {
   * {
     background: white !important;
@@ -149,15 +178,16 @@
 
                 <section>
           <h3>Media Queries</h3>
-          <p>Just like with a print stylesheet, you can add media queries based on screen size to any element you want:</p>
+          <p class="left-align">Just like with a print stylesheet, you can add media queries based on screen size to any element you want:</p>
           <ul>
-            <li>Widths</li>
-<li>Floats</li>
-<li>Font sizes</li>
-<li>Hovers</li>
-<li>Navigation</li>
-<li>Click/Tap Targets likes links and buttons</li>
-<li>Content that you want to display or hide</li></li>
+            <li><a href="http://codepen.io/bradfrost/full/orKvD" target="_blank">Widths</a></li>
+            <li>
+              <a href="http://codepen.io/bradfrost/full/vcuem">Floats</a></li>
+            <li><a href="http://www.weblinc.com/">Font size and style</a></li>
+            <li><a href="http://www.visitderby.co.uk/">Hovers</a></li>
+            <li><a href="http://2013.dconstruct.org/">Navigation</a></li>
+            <li><a href="http://www.julianabicycles.com/">Click/Tap Targets likes links and buttons</a></li>
+            <li><a href="http://codepen.io/bradfrost/full/orJwL">Content that you want to display or hide</a></li></li>
           </ul>
         </section>
 
@@ -170,7 +200,7 @@
 }
 @media only screen and (min-width:960px) {
   .container { 
-    max-width: 960px;
+    width: 960px;
   }
 }
 </code></pre>
@@ -183,11 +213,7 @@
             <li>Move your .callout divs' width and float styles inside a media query</li>
             <li>Fix styles as needed for your default CSS</li>
           </ul>
-          <pre><code class ="css">.callout {
-  margin: 0 auto;
-  width: ???;
-}
-@media only screen and (min-width:960px) {
+          <pre><code class ="css">@media only screen and (min-width:960px) {
   .callout { 
     margin: 0 ??% 0 0;
     width: ???%;
@@ -231,7 +257,7 @@
         </section>
 
         <section>
-          <h3>Media Queries using Min and Max-Width</h3>
+          <h3>Media Queries using Max-Width</h3>
           <p>Use multiple parameters to target in-between sizes (aka breakpoints)</p>
           <pre><code class ="css">@media only screen and (min-width:700px) and (max-width: 800px) {
   .nav { 
@@ -246,10 +272,10 @@
           <h3>Let's Develop It</h3>
           <p class="left-align">Make a mobile-first responsive site:</p>
           <ul>
-            <li>Move ALL your floats & widths into a media query</li>
+            <li>Move ALL your floats & widths into a media query for 960px wide viewports and up.</li>
             <li>Fix styles as needed for your default CSS - this is the mobile first stuff!</li>
-            <li>Resize browser & test on devices to see your media query kick in at different screen sizes.</li>
-            <li><strong>BONUS!</strong> Use ems instead of pixels for your media queries</li>
+            <li>Resize browser & test on devices to see your media query kick in at the larger screen size.</li>
+            <li><strong>BONUS!</strong> Use ems instead of pixels for your media query breakpoint.</li>
           </ul>
         </section>
 
