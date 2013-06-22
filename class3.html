@@ -53,6 +53,231 @@
 
 
 
+        <!-- Let's Develop It -->
+        <section>
+          <h3>Wednesday's Homework</h3>
+          <ul>
+            <li>Add media queries for breakpoints that are the size of popular mobile devices (phones, tablets, etc)</li>
+            <li>Look up these screen resolutions - try looking up your own devices</li>
+            <li>Try changing the widths at these breakpoints to mimic the rigid grid layouts we looked at.</li>
+            <li>Helpful tools:
+              <ul>
+                <li>
+                  <a href="http://responsivepx.com/">Breakpoint Finder</a> - works on local sites
+                </li>
+                <li>
+                  <a href="http://www.josscrowcroft.com/2011/code/window-size-bookmarklet/">Window Size Bookmarklet</a>
+                </li>
+                <li>
+                  <a href="http://www.responsinator.com/">Responsinator</a> - mimics real device sizes
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+        </section>
+
+        <section>
+          <h3>Breakpoints</h3>
+          <p class="left-align">These can be based on popular device sizes, like iPhone, iPad and desktop resolutions:</p>
+          <pre><code class ="css">.container { width: 100%; }
+@media only screen and (min-width:320px) { 
+  .container { 
+    margin: 0 auto;
+    width: 320px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .container {
+    width: 960px;
+  }
+}
+</code></pre>
+<p class="left">Example: <a href="http://www.eataly.com/">Eataly</a></p>
+        </section>
+
+
+        <section>
+          <h3>Media Queries for Screen Resolution</h3>
+          <p>Some computers have different resolution density. You can <a href="http://css-tricks.com/snippets/css/retina-display-media-query/">target displays on iPhones and iPads</a>, for example:</p>
+          <pre><code class ="css">@media (-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) {
+  .logo {
+    background-image: ('logo_retina.png'); 
+  }
+}
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Media Queries for Screen Resolution</h3>
+          <p>If you use this for images, you also need to change the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-size">background-size</a> property:</p>
+          <pre><code class ="css">@media (-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) {
+  .logo {
+    background-image: ('logo_retina.png'); 
+    background-size: 50%;
+  }
+}
+</code></pre>
+        </section>
+        
+         <!-- Let's Develop It -->
+        <section>
+          <h3>Let's Develop It</h3>
+          <ul>
+            <li>Add a retina (2x) media query to your CSS to change the <a href="images/logo_retina.png" target="_blank">logo image</a>.</li>
+            <li>Remember to change the background-size value!</li>
+          </ul>
+          <pre><code class ="css">@media (-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) {
+  .logo {
+    background-image: ('logo_retina.png'); 
+    background-size: 50%;
+  }
+}
+</code></pre>
+        </section>
+
+
+                <section>
+          <h3>Breakpoints</h3>
+          <p class="left-align">Breakpoints can also be more fluid, and added only where the layout starts to look funky:</p>
+          <pre><code class ="css">.hero-image { width: 100%; }
+@media only screen and (min-width:530px) { 
+  .container { 
+    float: left;
+    width: 41.6666666666667%; /* 400px/960px */;
+  }
+}
+</code></pre>
+<p class="left-align">Example: <a href="http://bohconf.com/">BohConf</a></p>
+        </section> 
+
+        <!-- Part 2 of Class 2: Responsive Design Best Practices -->
+        <section>
+         <h1>Best Practices</h1>
+       </section>        
+
+        <!-- Terms-->
+        <section>
+         <h3>Terms</h3>
+         <ul>
+           <li>
+            <div class = "blue">Best Practice</div>
+            <div>Method or technique that has consistently shown results superior to those achieved with other means, and that is used as a benchmark <a href="http://en.wikipedia.org/wiki/Best_practice">(Wikipedia)</a></div>
+           </li>
+           <li>
+            <div class = "blue">Design Pattern</div>
+            <div>Describe solutions to common usability or accessibility problems in a specific context<a href="http://en.wikipedia.org/wiki/Interaction_design_pattern">(Wikipedia)</a></div>
+           </li>
+         </ul>
+        </section>        
+        
+
+        
+        <!-- W3C Best Practices for Mobile Web Design -->
+        <section>
+          <h3>Mobile Web Design</h3>
+          <p class="left-align"><a href="http://www.w3.org/TR/mobile-bp/#d0e630">Best practices recommended by the W3C</a>:</p>
+          <p class="left-align"><span class="blue">User Experience:</span> 
+              Ensure that content provided by accessing a URI yields a thematically coherent experience when accessed from different devices.
+          </p>
+          <img src="images/fifa_mobile.png" alt="" width=300>
+          <a href="http://m.jcrew.com"><img src="images/mobile_jcrew.png" alt="" width=300 style="vertical-align: top"></a>
+        </section>
+
+        <!-- W3C Best Practices for Mobile Web Design -->
+        <section>
+          <h3>Mobile Web Design</h3>
+          <p class="left-align"><a href="http://www.w3.org/TR/mobile-bp/#d0e630">Best practices recommended by the W3C</a>:</p>
+          <p class="left-align"><span class="blue">Testing:</span>
+              Carry out testing on actual devices as well as emulators.
+          </p>
+          <img src="images/my_devices.jpg" alt="">
+        </section>
+
+        <!-- W3C Best Practices for Mobile Web Design -->
+        <section>
+          <h3>Mobile Web Design</h3>
+          <p class="left-align"><a href="http://www.w3.org/TR/mobile-bp/#d0e630">Best practices recommended by the W3C</a>:</p>
+          <p class="left-align"><span class="blue">Layout:</span> 
+              Use percentage and relative measures such as ems.
+          </p>
+          <img src="images/fixed_nav.png" alt="">
+
+        </section>
+
+        <!-- W3C Best Practices for Mobile Web Design -->
+        <section>
+          <h3>Mobile Web Design</h3>
+          <p class="left-align"><a href="http://www.w3.org/TR/mobile-bp/#d0e630">Best practices recommended by the W3C</a>:</p>
+          <p class="left-align"><span class="blue">Markup:</span> 
+              Organize documents so that if necessary they may be read without style sheets.
+          </p>
+        </section>
+
+        <!-- W3C Best Practices for Mobile Web Design -->
+        <section>
+          <h3>Mobile Web Design</h3>
+          <p class="left-align"><a href="http://www.w3.org/TR/mobile-bp/#d0e630">Best practices recommended by the W3C</a>:</p>
+          <p class="left-align"><span class="blue">Content:</span>
+              Ensure that material that is central to the meaning of the page precedes material that is not.
+          </p>
+          <a href="images/mlb_app.png" title=""><img src="images/mlb_app.png" alt="" width=300></a>
+          <a href="images/fox_ads.png" title=""><img src="images/fox_ads.png" alt="" width=300></a>    
+        </section>
+
+        <!-- W3C Best Practices for Mobile Web Design -->
+        <section>
+          <h3>Mobile Web Design</h3>
+          <p class="left-align"><a href="http://www.w3.org/TR/mobile-bp/#d0e630">Best practices recommended by the W3C</a>:</p>
+          <p class="left-align"><span class="blue">Content:</span>
+              Ensure that material that is central to the meaning of the page precedes material that is not.
+          </p>
+          <a href="images/ap_1.png" title=""><img src="images/ap_1.png" alt="" width=300></a>
+          <a href="images/ap_2.png" title=""><img src="images/ap_2.png" alt="" width=300></a>
+        </section>
+
+        <!-- W3C Best Practices for Mobile Web Design -->
+        <section>
+          <h3>Mobile Web Design</h3>
+          <p class="left-align"><a href="http://www.w3.org/TR/mobile-bp/#d0e630">Best practices recommended by the W3C</a>:</p>
+          <p class="left-align"><span class="blue">Content:</span>
+              Ensure that material that is central to the meaning of the page precedes material that is not.
+          </p>
+          <a href="images/content_first.png" title=""><img src="images/content_first.png" alt="" width=300></a>
+          <a href="images/grist_headline.png" title=""><img src="images/grist_headline.png" alt="" width=300></a>
+        </section>
+
+        <!-- Let's Develop It -->
+        <section>
+          <h3>Let's Develop It</h3>
+          <ul>
+            <li>Add media query breakpoints wherever your layout starts to break or look weird</li>
+            <li>Keep in mind mobile web design best practices to find elements that need to change. Change styles for navigation, font sizes, padding, widths, whatever you think makes your page more readable and usable.</li>
+            <li>Helpful tools:
+              <ul>
+                <li>
+                  <a href="http://responsivepx.com/">Breakpoint Finder</a> - works on local sites
+                </li>
+                <li>
+                  <a href="http://www.josscrowcroft.com/2011/code/window-size-bookmarklet/">Window Size Bookmarklet</a>
+                </li>
+                <li>
+                  <a href="http://www.responsinator.com/">Responsinator</a> - mimics real device sizes
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+        </section>
+
         <!-- W3C Navigation Best Practices for Mobile Web Design -->
         <section>
           <h3>Mobile Web Design</h3>
@@ -172,206 +397,17 @@ Human Test: If there are either tabindex attributes or layout effects that might
         </section>
         
         
-        <!-- Terms-->
-        <section>
-         <h3>Terms</h3>
-         <ul>
-           <li>
-            <div class = "blue">Responsive Design</div>
-            <div>Fluid grids + Flexible Images/Video + Media Queries</div>
-           </li>
-           <li>
-            <div class = "blue">Viewport</div>
-            <div>The visible area of a webpage in a browser window</div>
-           </li>
-           <li>
-            <div class = "red">Mobile App</div>
-            <div>Software that is downloaded to a mobile device - we will not cover this.</div>
-           </li>
-           <li>
-            <div class = "red">Mobile website</div>
-            <div>A separate website with its own domain built to target 'mobile devices', typically meaning smartphones. We're not covering this either.</div>
-           </li>
-         </ul>
-        </section>
-      
+
 
         <!-- Today's Goal -->
         <section>
           <h3>Goal for Today</h3>
           <div>
-            Build a responsive navigation menu.
+            Refine our design using best practices and media queries to target different breakpoints.
+
           </div>
         </section>
-        
-        <!-- 3 Keys to RWD-->
-        <section>
-          <h3>Four Keys to Responsive Design</h3>
-          <ul>
-            <li>A Fluid Grid</li>
-            <li>Flexible Images</li>
-            <li>Media Queries</li>
-            <li>Viewport Meta Tag</li>
-          </ul>
-        </section>
-        
-        <!--Fluid Grid -->
-        <section>
-          <h3>The Fluid Grid</h3>
-          <ul>
-            <li>Define container widths as % instead of px</li>
-            <li>Target ÷ context = result <span class="blue">(Important - write this down!)</span></li>
-          </ul>
-        </section>
-        
-        <!-- Target ÷ context = result -->
-        <section>
-          <h3>Target ÷ context = result</h3>
-          <ul>
-            <li>Target = width you desire in pixels</li>
-            <li>Context = the container of the element - a div or could be the viewport</li>
-            <li>Result is a percentage value you can use as a width in your CSS</li>
-          </ul>
-        </section>
-        
-        <section>
-          <h3>The Fluid Grid</h3>
-          <img src="images/640div.png" alt="640 pixel div target width">           
-        </section>
-
-        <section>
-          <h3>The Fluid Grid</h3>
-          <img src="images/960div.png" alt="940 pixel div container width">           
-        </section>
-
-        <section>
-          <h3>The Fluid Grid</h3>
-          <div class="giant">
-            640px ÷ 960px = <br>
-            <strong>.666666667</strong>
-          </div>           
-        </section>
-
-        <section>
-          <h3>The Fluid Grid</h3>
-          <div class="giant">
-            .666666667 =<br>
-            <strong class="green">66.6666667%</strong>
-          </div>           
-        </section>
-
-        <section>
-          <h3>The Fluid Grid</h3>
-          <img src="images/fluidgrid1.png" alt="fluid div with percentage width">           
-        </section>
-
-        <section>
-          <h3>The Fluid Grid</h3>
-          <img src="images/fluidgrid2.png" alt="fluid grid with percentages for all divs">        
-        </section>
-
-        <section>
-          <h3>The Fluid Grid</h3>
-          <div>
-            <pre><code contenteditable class ="css">.container {
-  width: 100%;
-  margin: 0 40px;
-}
-.main-column {
-  width: 640px;
-  margin-right: 40px;
-}
-.sidebar {
-  width: 200px;
-}</code></pre>
-          </div>
-        </section>
-
-        <section>
-          <h3>The Fluid Grid</h3>
-          <div>
-            <pre><code contenteditable class ="css">.container {
-  width: 960px;
-  margin: 0 04.1666667%;
-}
-.main-column {
-  width: 66.666667%;
-  margin-right: 04.1666667%;
-}
-.sidebar {
-  width: 20.833333%;
-}</code></pre>
-          </div>
-        </section>
-
-        <!-- Flexible Images -->
-        <section>
-          <h3>Flexible Images</h3>
-          <ul>
-            <li>Like with fluid grids, percentages make images flexible in a page</li>
-            <li>Video, slideshows, etc can also be made flexible</li>
-          </ul>
-
-                      <pre><code contenteditable class ="css">img {
-  max-width: 100%;
-}</code></pre>
-        </section>
-
-        
-
-        
-        <!-- Exercise-->
-        <section>
-          <h3>Let's Develop It</h3>
-          <p>Create a new html file</p>
-          <p>Save it in our <span class="blue">/gdiJS/</span> folder</p>
-          <pre><code class ="html">
-&lt;html>
-  &lt;head>
-    &lt;title>My Site!&lt;/title>
-  &lt;/head>
-  &lt;body>
-    My site!
-  &lt;/body>
-&lt;/html>
-</code></pre>
-        </section>
-        
-        <section>
-          <h3>Let's Develop It</h3>
-          <p>Create a new javascript file (a file that ends in .js)</p>
-          <p>Link it to your html file</p>
-          <pre><code class ="html">
-&lt;html>
-  &lt;head>
-    &lt;title>My Site!&lt;/title>
-    &lt;script src="myjavascriptfile.js">&lt;/script>
-  &lt;/head>
-  &lt;body>
-    My site!
-  &lt;/body>
-&lt;/html>
-</code></pre>
-        </section>
-        
-        <section>
-          <h3>Let's Develop It</h3>
-          <h4>Lifetime Supply Calculator</h4>
-          <p>Ever wonder how much a lifetime supply of your favorite snack or drink is?</p>
-          <ul>
-            <li>Store your age in a variable</li>
-            <li>Store your maximum in a variable</li>
-            <li>Store an estimated amount per day in a variable</li>
-            <li>Calculate how many you would eat/drink for the rest of your life.</li>
-            <li>Output the result in an alert(see below) like so: "You will need X _____s to last you until your old age of N"</li>
-          </ul>
-          
-          <pre><code contenteditable class ="javascript">
-          alert(answer);
-</code></pre>
-          
-        </section>
-        
+      
 
 
         <!-- -->

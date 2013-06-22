@@ -127,6 +127,11 @@ h1 {
 	overflow: hidden;
 	background: transparent url('../img/logo.png') 0 0 no-repeat;
 }
+@media (-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) {
+	background-image: url('../img/logo_retina.png');
+	background-size: 50%;
+}
 
 h2 {
 	margin: 0.5em 0;
