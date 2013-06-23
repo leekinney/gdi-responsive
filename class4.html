@@ -77,6 +77,56 @@
         </section>
 
 
+        
+        
+        <section>
+          <h3>Forms</h3>
+          <p class = "left-align">
+          Best Practices
+          </p>
+          <ul>
+            <li>
+              <span class="blue">Form Inputs for Mobile</span>
+              5.5.1 Input
+
+[MINIMIZE_KEYSTROKES] Keep the number of keystrokes to a minimum.
+
+[AVOID_FREE_TEXT] Avoid free text entry where possible.
+
+[PROVIDE_DEFAULTS] Provide pre-selected default values where possible.
+
+[DEFAULT_INPUT_MODE] Specify a default text entry mode, language and/or input format, if the device is known to support it.
+            </li>
+            <li>
+5.5.2 Tab Order
+
+[TAB_ORDER] Create a logical order through links, form controls and objects.
+
+5.5.2.1 What it means
+
+It is important that as the user navigates through the page the various fields and objects are presented in a logical order, especially as many of them will not be visible at the same time as the focus item.
+
+5.5.2.2 How to do it
+
+Use document order to control layout and tab order.
+
+5.5.2.3 What to test
+
+Machine Test: Check that there are no tabindex attributes or layout effects that affect the order of presentation.
+
+If there are tabindex attributes check that all controls have a tab index and that they are used consistently.
+
+Human Test: If there are either tabindex attributes or layout effects that might affect the order of presentation, then check that the order is usable.
+
+5.5.3 Labels for Form Controls
+
+[CONTROL_LABELLING] Label all form controls appropriately and explicitly associate labels with form controls.
+
+[CONTROL_POSITION] Position labels so they lay out properly in relation to the form controls they refer to.
+            </li>
+          </ul>
+        </section>
+        
         <section>
           <h3>Performance</h3>
           <div class = "left-align">
@@ -102,11 +152,20 @@
           How to enhance for special mobile device features.
           Hint: we already did some of this using media queries to progressively enhance for screen size, retina resolution, etc.
 
-          What's the other side of Progressive enhancement?
+          tools
+          <ul>
+            <li>Modernizr <br>
+              adds classes to &lt;body&gt; element so we can style things differently for browsers that support certain features
+            </li>
+            features: css media queries, box-sizing, mutiple bgs, background-size, box-shadow, font-face, gradients...etc
+          </ul>
         </section>
 
 
         <section>
+
+          What's the other side of Progressive enhancement?
+
           <h3>...Gradeful Degradation</h3>
           A site should GRACEFULLY DEGRADE when a browser does not support fully the features of our design and build.
           So this applies to things like:
