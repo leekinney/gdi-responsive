@@ -350,6 +350,15 @@ footer {
 	
 }
 
+@media (-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) {
+	.logo {
+		background-image: url("img/logo_retina.png");
+		background-size: 50%;
+	}
+}
+
+
 /* Print Styles */
 
 @media print {
