@@ -342,12 +342,17 @@ footer {
 					border-left: none;
 				}
 
+@media screen and (min-width: 620px) {
+	.toggle-nav {
+		display: none;
+	}
+}
+
 @media screen and (min-width: 960px) {
 	.callout-container .callout {
 		margin-right: 60px;*/ /* 60px/960px */
 		width: 250px;
-	}
-	
+	}	
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), 

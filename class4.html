@@ -53,32 +53,131 @@
 
 
 
-        <!-- Welcome-->
-        <section>
-          <h3>Welcome!</h3>
-          <div>
-          <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
-          <p class ="green">Some "rules"</p>
-          <ul>
-            <li>We are here for you!</li>
-            <li>Every question is important</li>
-            <li>Help each other</li>
-            <li>Have fun</li>
-          </ul>
-          </div>
-        </section>
+
 
         <!-- Today's Goal -->
         <section>
           <h3>Goal for Today</h3>
           <div>
-            Build a responsive navigation menu.
+            Learn design patterns for a responsive navigation menu, touch-friendly slideshow, forms and tables.
           </div>
         </section>
 
+      <section>
+          <h3>Homework</h3>
+          <ul>
+            <li>Use navigation best practices to make your nav menu touch-friendly and usable at small screen sizes.</li>
+            <li>Use the <a href="class3.html#/27" target="_blank">"Nav Bar"</a> or <a href="class3.html#/27" target="_blank">"Stacked List"</a> design pattern to accomplish this for small screens.</li>
+            <li>Use media queries to change the nav bar to match our original design at larger screen sizes where it fits the layout best.</li>
+          </ul>
+        </section>
 
+        <section>
+          <h3>Responsive Navigation</h3>
+          <ul>
+          <li>Provide only minimal navigation at the top of the page</li>
+            <li>
+              Provide consistent navigation mechanisms.
+            </li>
+            <li>Should be touch-friendly with large, tappable buttons</li>
+          </ul>
+
+        </section>
         
+        <section>
+          <h3>Responsive Navigation</h3>
+              <p class="left-align">How do we reconcile these requirements?</p>
+
+              <p class="left-align">
+Build a <a href="http://codepen.io/bradfrost/full/sHvaz">toggle menu</a> that shows/hides our small screen nav on click/touch.
+
+              </p>
+        </section>
+
+        <section>
+          <h3>jQuery Toggle</h3>
+              <p class="left-align"><a href="http://api.jquery.com/toggle/">Toggle</a> refers to showing/hiding element</p>
+
+              <p class="left-align">
+Syntax looks like:
+              </p>
+
+                          <pre><code contenteditable class ="javascript">$('nav').toggle();</code></pre>
+        </section>
         
+        <section>
+          <h3>jQuery Toggle</h3>
+        <p class="left-align">
+        We want this toggle to happen on <strong>alternate clicks</strong> so we put this toggle inside a <strong>click event</strong>:
+
+        </p>
+
+        <pre><code contenteditable class ="javascript">$('.clickme').click(function() {
+  $('nav').toggle();
+});</code></pre>
+        </section>
+
+        <!-- Exercise-->
+        <section>
+          <h3>Let's Develop It</h3>
+          <p class="left-align">Add a button to your page that will trigger the menu toggle</p>
+          <p class="left-align">Add the toggle event code to your page underneath your jQuery include (~line 130):</p>
+         <pre><code contenteditable class ="javascript">$('.toggle-button').click(function() {
+  $('header nav').toggle();
+});</code></pre>
+        </section>
+
+        <section>
+          <h3>jQuery Toggle for Mobile Only</h3>
+        <p class="left-align">
+        This toggle button should only show at small screen sizes, so hide it with CSS inside a media query for large screen sizes:
+
+        </p>
+
+        <pre><code contenteditable class ="css">@media (min-width: 500px) {
+  .toggle-nav {
+    display: none;
+  }
+}</code></pre>
+        </section>
+
+
+        <section>
+          <h3>jQuery Toggle on Resize</h3>
+        <p class="left-align">
+        We need extra code to handle when the browser window is resized. With Javascript you can check the window size using if statements. Try including <a href="template/nav.js">this code</a> in place of what we already wrote.
+
+        </p>
+        </section>
+
+        <section>
+          <h3>Let's Develop It</h3>
+        <ul>
+        <li>
+        Use the provided<a href="template/nav.js" target="_blank">Javascript code</a> to create a stacked nav that toggles. Style the nav as <a href="http://codepen.io/bradfrost/full/vcuem" target="_blank">stacked</a> for mobile first in your default CSS, then make it <a href="http://codepen.io/bradfrost/full/Egaql" target="_blank">horizontal</a> in your media query for larger scresn sizes. 
+        </li>
+        <li>You may need to adjust the provided JS window width check to match your media queries for when the toggle button appears.</li>
+      </ul>
+        </section>
+
+        <section>
+          <h3>Bonus Nav!</h3>
+        <ul>
+        <li>
+        In your template file, check the js/menu folder for an example of the select menu design pattern. 
+        </li>
+        <li>Open the <a href="template/js/menu/index.html">template/js/menu/index.html</a> file and resize to see it in action.</li>
+      </ul>
+        </section>
+
+        <section>
+          <h3>Slideshow</h3>
+          <p class = "left-align">
+          <a href="http://www.slidesjs.com/" target="_blank">SlidesJS</a> is a responsive, touch-friendly jQuery plugin for making slideshows.
+          </p>
+        </section>
+
+
         <section>
           <h3>Forms</h3>
           <p class = "left-align">
@@ -155,292 +254,55 @@ Human Test: If there are either tabindex attributes or layout effects that might
           tools
           <ul>
             <li>Modernizr <br>
-              adds classes to &lt;body&gt; element so we can style things differently for browsers that support certain features
-            </li>
-            features: css media queries, box-sizing, mutiple bgs, background-size, box-shadow, font-face, gradients...etc
+              
           </ul>
         </section>
 
+        <section>
+          <h3>Browser Support</h3>
+          <p class="left-align">Check browser support for specific features at <a href="http://caniuse.com" target="_blank">caniuse.com</a></p>
+
+        </section>
+
+
+        <section>
+          <h3>Browser Support</h3>
+          <p class="left-align">Write CSS for specific features using <a href="http://modernizr.com/" target="_blank">Modernizr</a></p>
+
+          <p class="left-align">Modernizr adds classes to the &lt;body&gt; element</p>
+            <ul>
+              <li>Classes let us style things differently for browsers that support certain features</li>
+              <li>Includes classes for features like media queries, box-sizing, mutiple bgs, background-size, box-shadow, font-face, gradients...etc</li>
+            </ul>
+        </section>
+
+                <section>
+          <h3>Let's Develop It</h3>
+          <p class="left-align">You should already have Modernizr built into your template, let's use it!</p>
+
+            <ul>
+              <li>Inspect the &lt;body&gt; element to see what classes it has</li>
+              <li>Write styles using the .js class and the .no-js class so that your toggle navigation is styled with and without Javascript enabled</li>
+              <li>Test by turning off JS in your browser (hint: <a target="_blank" href="https://chrome.google.com/webstore/detail/quick-javascript-switcher/geddoclleiomckbhadiaipdggiiccfje?hl=en">useful Chrome plugin</a> makes this easy)</li>
+            </ul>
+        </section>
 
         <section>
 
           What's the other side of Progressive enhancement?
 
-          <h3>...Gradeful Degradation</h3>
-          A site should GRACEFULLY DEGRADE when a browser does not support fully the features of our design and build.
-          So this applies to things like:
-          * IE!
-          * BlackBerry!
-          * Older Android
-          * Older iOS
-          * Opera Mobile
-
-          caniuse.com
-        </section>
-
-        <section>
-          <h3>Welcome!</h3>
-          <div class = "left-align">
-          <p class = "blue">Tell us about yourself.</p>
+          <h3>...Graceful Degradation</h3>
+          <div class="left-align fragment">A site should GRACEFULLY DEGRADE when a browser does not support fully the features of our design and build.
+          This applies to browsers or devices like:
           <ul>
-            <li>Who are you?</li>
-            <li>What do you hope to get out of the class?</li>
-            <li>What's something no one in this room knows about you?</li>
-          </ul>
-          </div>
-        </section>
-        
-        
-        <!-- Terms-->
-        <section>
-         <h3>Terms</h3>
-         <ul>
-           <li>
-            <div class = "blue">Responsive Design</div>
-            <div>Fluid grids + Flexible Images/Video + Media Queries</div>
-           </li>
-           <li>
-            <div class = "blue">Viewport</div>
-            <div>The visible area of a webpage in a browser window</div>
-           </li>
-           <li>
-            <div class = "red">Mobile App</div>
-            <div>Software that is downloaded to a mobile device - we will not cover this.</div>
-           </li>
-           <li>
-            <div class = "red">Mobile website</div>
-            <div>A separate website with its own domain built to target 'mobile devices', typically meaning smartphones. We're not covering this either.</div>
-           </li>
-         </ul>
-        </section>
-        
-        <!-- Tools -->
-        <section>
-          <h3>Tools</h3>
-          <ul>
-            <li>
-              <div class = "yellow">Browser:</div>
-              <div>Chrome</div>
-              <div>Firefox</div>
-             </li>
-             <li>
-              <div class = "yellow">Development Toolkit:</div>
-              <div>Chrome - Inspector</div>
-              <div>Firefox - Firebug</div>
-             </li>
-             <li>
-              <div class = "yellow">Text Editor:</div>
-              <div><a href="http://www.sublimetext.com/2">Sublime Text - Mac or Windows</a><br>
-                <a href="http://www.sublimetext.com/2">sublimetext.com/2</a></div>
-             </li>
+            <li>IE!</li>
+            <li>BlackBerry!</li>
+            <li>Older Android</li>
+            <li>Older iOS</li>
+            <li>Opera Mobile</li>
+            <li>etc</li>
           </ul>
         </section>
-
-        <!-- Nitty gritty 1 - What is RWD? -->
-        <section>
-          <h3>What is Responsive Web Design?</h3>
-          <blockquote class="quote">Responsive web design is an approach to web design in which a site is crafted to provide an optimal viewing experience—easy reading and navigation with a minimum of resizing, panning, and scrolling— <em>across a wide range of devices (from desktop computer monitors to mobile phones)</em>.</blockquote>
-          <cite>-Wikipedia</cite>
-        </section>
-        
-        <!-- Examples -->
-        <section>
-          <h3>Examples</h3>
-          <ul>
-            <li><a href="http://www.bostonglobe.com/">Boston Globe</a></li>
-            <li><a href="http://www.microsoft.com/">Microsoft</a></li>
-            <li><a href="http://www.smashingmagazine.com/">Smashing Magazine</a></li>
-            <li><a href="http://worldwildlife.org/">World Wildlife Fund</a></li>
-            <li><a href="http://www.weblinc.com/">WebLinc</a></li>
-            <li><a href="http://mediaqueri.es/">Media Queries</a></li>
-          </ul>
-        </section>
-        
-        <!-- Nitty gritty 1 - What is RWD? -->
-        <section>
-          <h3>Why bother?</h3>
-          <blockquote class="quote">Responsive web design is an approach to web design in which a site is crafted to provide an optimal viewing experience—easy reading and navigation with a minimum of resizing, panning, and scrolling— <em>across a wide range of devices (from desktop computer monitors to mobile phones)</em>.</blockquote>
-          <cite>-Wikipedia</cite>
-        </section>
-
-
-        <!-- Today's Goal -->
-        <section>
-          <h3>Goal for Today</h3>
-          <div>
-            Build a responsive form, a responsive table, and learn how to build for backwards compatibility & performance.
-          </div>
-        </section>
-        
-        <!-- 3 Keys to RWD-->
-        <section>
-          <h3>Four Keys to Responsive Design</h3>
-          <ul>
-            <li>A Fluid Grid</li>
-            <li>Flexible Images</li>
-            <li>Media Queries</li>
-            <li>Viewport Meta Tag</li>
-          </ul>
-        </section>
-        
-        <!--Fluid Grid -->
-        <section>
-          <h3>The Fluid Grid</h3>
-          <ul>
-            <li>Define container widths as % instead of px</li>
-            <li>Target ÷ context = result <span class="blue">(Important - write this down!)</span></li>
-          </ul>
-        </section>
-        
-        <!-- Target ÷ context = result -->
-        <section>
-          <h3>Target ÷ context = result</h3>
-          <ul>
-            <li>Target = width you desire in pixels</li>
-            <li>Context = the container of the element - a div or could be the viewport</li>
-            <li>Result is a percentage value you can use as a width in your CSS</li>
-          </ul>
-        </section>
-        
-        <section>
-          <h3>The Fluid Grid</h3>
-          <img src="images/640div.png" alt="640 pixel div target width">           
-        </section>
-
-        <section>
-          <h3>The Fluid Grid</h3>
-          <img src="images/960div.png" alt="940 pixel div container width">           
-        </section>
-
-        <section>
-          <h3>The Fluid Grid</h3>
-          <div class="giant">
-            640px ÷ 960px = <br>
-            <strong>.666666667</strong>
-          </div>           
-        </section>
-
-        <section>
-          <h3>The Fluid Grid</h3>
-          <div class="giant">
-            .666666667 =<br>
-            <strong class="green">66.6666667%</strong>
-          </div>           
-        </section>
-
-        <section>
-          <h3>The Fluid Grid</h3>
-          <img src="images/fluidgrid1.png" alt="fluid div with percentage width">           
-        </section>
-
-        <section>
-          <h3>The Fluid Grid</h3>
-          <img src="images/fluidgrid2.png" alt="fluid grid with percentages for all divs">        
-        </section>
-
-        <section>
-          <h3>The Fluid Grid</h3>
-          <div>
-            <pre><code contenteditable class ="css">.container {
-  width: 100%;
-  margin: 0 40px;
-}
-.main-column {
-  width: 640px;
-  margin-right: 40px;
-}
-.sidebar {
-  width: 200px;
-}</code></pre>
-          </div>
-        </section>
-
-        <section>
-          <h3>The Fluid Grid</h3>
-          <div>
-            <pre><code contenteditable class ="css">.container {
-  width: 960px;
-  margin: 0 04.1666667%;
-}
-.main-column {
-  width: 66.666667%;
-  margin-right: 04.1666667%;
-}
-.sidebar {
-  width: 20.833333%;
-}</code></pre>
-          </div>
-        </section>
-
-        <!-- Flexible Images -->
-        <section>
-          <h3>Flexible Images</h3>
-          <ul>
-            <li>Like with fluid grids, percentages make images flexible in a page</li>
-            <li>Video, slideshows, etc can also be made flexible</li>
-          </ul>
-
-                      <pre><code contenteditable class ="css">img {
-  max-width: 100%;
-}</code></pre>
-        </section>
-
-        
-
-        
-        <!-- Exercise-->
-        <section>
-          <h3>Let's Develop It</h3>
-          <p>Create a new html file</p>
-          <p>Save it in our <span class="blue">/gdiJS/</span> folder</p>
-          <pre><code class ="html">
-&lt;html>
-  &lt;head>
-    &lt;title>My Site!&lt;/title>
-  &lt;/head>
-  &lt;body>
-    My site!
-  &lt;/body>
-&lt;/html>
-</code></pre>
-        </section>
-        
-        <section>
-          <h3>Let's Develop It</h3>
-          <p>Create a new javascript file (a file that ends in .js)</p>
-          <p>Link it to your html file</p>
-          <pre><code class ="html">
-&lt;html>
-  &lt;head>
-    &lt;title>My Site!&lt;/title>
-    &lt;script src="myjavascriptfile.js">&lt;/script>
-  &lt;/head>
-  &lt;body>
-    My site!
-  &lt;/body>
-&lt;/html>
-</code></pre>
-        </section>
-        
-        <section>
-          <h3>Let's Develop It</h3>
-          <h4>Lifetime Supply Calculator</h4>
-          <p>Ever wonder how much a lifetime supply of your favorite snack or drink is?</p>
-          <ul>
-            <li>Store your age in a variable</li>
-            <li>Store your maximum in a variable</li>
-            <li>Store an estimated amount per day in a variable</li>
-            <li>Calculate how many you would eat/drink for the rest of your life.</li>
-            <li>Output the result in an alert(see below) like so: "You will need X _____s to last you until your old age of N"</li>
-          </ul>
-          
-          <pre><code contenteditable class ="javascript">
-          alert(answer);
-</code></pre>
-          
-        </section>
-        
-
 
         <!-- -->
         <section>
