@@ -108,7 +108,7 @@ Syntax looks like:
         <section>
           <h3>jQuery Toggle</h3>
         <p class="left-align">
-        We want this toggle to happen on <strong>alternate clicks</strong> so we put this toggle inside a <strong>click event</strong>:
+        We want this toggle to show or hide our nav on <strong>alternate clicks</strong> so we put this toggle inside a <strong>click event</strong>:
 
         </p>
 
@@ -120,11 +120,15 @@ Syntax looks like:
         <!-- Exercise-->
         <section>
           <h3>Let's Develop It</h3>
-          <p class="left-align">Add a button to your page that will trigger the menu toggle</p>
-          <p class="left-align">Add the toggle event code to your page underneath your jQuery include (~line 130):</p>
-         <pre><code contenteditable class ="javascript">$('.toggle-button').click(function() {
+          <ul>
+          <li>Add a button to your page that will trigger the menu toggle</li>
+          <li>Add the toggle event code to your page underneath your jQuery include (~line 130), inside a &lt;script&gt; tag:</li>
+        </ul>
+         <pre><code contenteditable class ="javascript">&lt;script&gt;
+$('.toggle-button').click(function() {
   $('header nav').toggle();
-});</code></pre>
+});
+&lt;/script&gt;</code></pre>
         </section>
 
         <section>
@@ -145,8 +149,7 @@ Syntax looks like:
         <section>
           <h3>jQuery Toggle on Resize</h3>
         <p class="left-align">
-        We need extra code to handle when the browser window is resized. With Javascript you can check the window size using if statements. Try including <a href="template/nav.js">this code</a> in place of what we already wrote.
-
+        We need extra code to handle when the browser window is resized. With Javascript you can check the window size using if statements.
         </p>
         </section>
 
@@ -164,7 +167,7 @@ Syntax looks like:
           <h3>Bonus Nav!</h3>
         <ul>
         <li>
-        In your template file, check the js/menu folder for an example of the select menu design pattern. 
+        In your template file, check the js/menu folder for an example of the <a href="http://codepen.io/bradfrost/full/hkuzA" target="_blank">select menu</a> design pattern. 
         </li>
         <li>Open the <a href="template/js/menu/index.html">template/js/menu/index.html</a> file and resize to see it in action.</li>
       </ul>
@@ -180,82 +183,85 @@ Syntax looks like:
 
         <section>
           <h3>Forms</h3>
-          <p class = "left-align">
-          Best Practices
-          </p>
-          <ul>
-            <li>
-              <span class="blue">Form Inputs for Mobile</span>
-              5.5.1 Input
+              <p class="left-align"><span class="blue">Form Inputs for Mobile</span>
+              <a href="http://www.w3.org/TR/mobile-bp/#bpgroupinput">W3C says:</a></p>
+<ul>
+<li>Keep the number of keystrokes to a minimum.</li>
+<li>
+Avoid free text entry where possible. Provide pre-selected default values instead.
+</li>
+<li>
+Label all form controls appropriately and explicitly associate labels with form controls.
+</li>
+<li>
+Position labels so they lay out properly in relation to the form controls they refer to.
+</li>
+  <li><a href="http://uxdesign.smashingmagazine.com/2010/03/11/forms-on-mobile-devices-modern-solutions/">More guidelines</a></li>
+</ul>
 
-[MINIMIZE_KEYSTROKES] Keep the number of keystrokes to a minimum.
 
-[AVOID_FREE_TEXT] Avoid free text entry where possible.
-
-[PROVIDE_DEFAULTS] Provide pre-selected default values where possible.
-
-[DEFAULT_INPUT_MODE] Specify a default text entry mode, language and/or input format, if the device is known to support it.
-            </li>
-            <li>
-5.5.2 Tab Order
-
-[TAB_ORDER] Create a logical order through links, form controls and objects.
-
-5.5.2.1 What it means
-
-It is important that as the user navigates through the page the various fields and objects are presented in a logical order, especially as many of them will not be visible at the same time as the focus item.
-
-5.5.2.2 How to do it
-
-Use document order to control layout and tab order.
-
-5.5.2.3 What to test
-
-Machine Test: Check that there are no tabindex attributes or layout effects that affect the order of presentation.
-
-If there are tabindex attributes check that all controls have a tab index and that they are used consistently.
-
-Human Test: If there are either tabindex attributes or layout effects that might affect the order of presentation, then check that the order is usable.
-
-5.5.3 Labels for Form Controls
-
-[CONTROL_LABELLING] Label all form controls appropriately and explicitly associate labels with form controls.
-
-[CONTROL_POSITION] Position labels so they lay out properly in relation to the form controls they refer to.
-            </li>
-          </ul>
         </section>
-        
+
         <section>
-          <h3>Performance</h3>
-          <div class = "left-align">
-          <p class="left-align">Best Practices for Mobile Performance from W3C</p>
+          <h3>Let's Develop It</h3>
           <ul>
-            <li>
-              Keep the number of externally linked resources to a minimum. Each linked resource (images, style sheets and other objects) requires a separate request across the network. This may add significantly to the load time of the page in the mobile context.
-              <br>
-              Solution: Use Sprites for images, minify & combine CSS, minify & combine JS
-            </li>
-            <li>
-              Limit content to what the user has requested.
-              Mobile users often pay for bandwidth, so offering them content that is extraneous to their needs, especially advertising, costs them time and money and contributes to an unsatisfactory experience. In general, the user's consent should be sought before initiating the download of content.
-              *if hiding content, use appropriate methods to NOT load the content if it's not going to be useful for mobile user*
-              *P.S. if it's not useful for a mobile user, it's probably not useful for anyone. consider getting rid of it for ALL devices*
-            </li>
+            <li>Add this <a href="template/form.html">form HTML</a> inside your .callout-container div</li>
+            <li>Style it so the labels are vertical for mobile first, and then horizontal in a media query. <a href="http://codepen.io/chriscoyier/full/DmnlJ">Example</a></li>
+            <li>You may have to adjust your layout (widths, percentage values, etc) to make this form fit!!</li>
+            <li>BONUS! Add <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Forms_in_HTML#The_placeholder_attribute">default values</a> to your form.</li>
           </ul>
-          </div>
+
+        </section>  
+        
+         <section>
+          <h3>Tricky Tables</h3>
+          <p class="left-align">Options for squeezing tables:</p>
+          <ul>
+            <li>Pinch it down to small size with good ol' max-width: 100% or percentage width</li>
+            <li>Don't use a table for data but maybe a list where possible</li>
+            <li><a href="http://codepen.io/aarongustafson/full/ucJGv">CSS trickery</a> to re-style table data vertically instead of horizontally</li>
+            <li><a href="http://bradfrost.github.io/this-is-responsive/patterns.html#tables">More</a></li>
+          </ul>
+          </section>
+
+
+        <section>
+          <h3>Let's Develop It</h3>
+          <ul>
+            <li>Add a table inside your .main-column div</li>
+            <li>Make your table responsive using <a href="http://codepen.io/aarongustafson/full/ucJGv">this example</a>'s styles as a guide</li>
+          </ul>
+
+        </section>  
+
+        <section>
+          <h3>Performance Best Practices</h3>
+          <p class = "left-align">
+              Keep the number of externally linked resources to a minimum. Each linked resource (images, style sheets and other objects) requires a separate request across the network. This may add significantly to the load time of the page in the mobile context.
+              </p>
+          <p class = "left-align">
+
+              <span class="blue">Solution:</span> Use sprites for images, minify & combine CSS, minify & combine JS
+          </p>
+        </section>
+
+        <section>
+          <h3>Performance Best Practices</h3>
+          <p class = "left-align">
+              Limit content to what the user has requested.
+              Mobile users often pay for bandwidth, so offering them content that is extraneous to their needs, especially advertising, costs them time and money and contributes to an unsatisfactory experience. In general, the user's consent should be sought before initiating the download of content.</p>
+          <p class = "left-align">
+
+              <span class="blue">Solution</span>: If hiding content, use appropriate methods to NOT load the content if it's not going to be useful for mobile user.
+              *P.S. If it's not useful for a mobile user, it's probably not useful for anyone. Consider getting rid of it for ALL devices*
+
+          </p>
         </section>
         
         <section>
           <h3>Progressive Enhancement</h3>
-          How to enhance for special mobile device features.
-          Hint: we already did some of this using media queries to progressively enhance for screen size, retina resolution, etc.
-
-          tools
-          <ul>
-            <li>Modernizr <br>
-              
-          </ul>
+          <p class="left-align">Hint: we already did some of this using media queries to progressively enhance for screen size, retina resolution, etc.
+          </p>
         </section>
 
         <section>
@@ -282,9 +288,13 @@ Human Test: If there are either tabindex attributes or layout effects that might
 
             <ul>
               <li>Inspect the &lt;body&gt; element to see what classes it has</li>
-              <li>Write styles using the .js class and the .no-js class so that your toggle navigation is styled with and without Javascript enabled</li>
-              <li>Test by turning off JS in your browser (hint: <a target="_blank" href="https://chrome.google.com/webstore/detail/quick-javascript-switcher/geddoclleiomckbhadiaipdggiiccfje?hl=en">useful Chrome plugin</a> makes this easy)</li>
+              <li>Write styles using the .boxshadow and .borderradius classes for your button styles</li>
+              <li>Test using <a href="http://www.browserstack.com/">Browser Stack</a> free trial if you don't have old IE</li>
             </ul>
+<pre><code contenteditable class ="css">.borderradius .button {
+  border-radius: 4px;
+}</code></pre>
+
         </section>
 
         <section>
@@ -300,8 +310,21 @@ Human Test: If there are either tabindex attributes or layout effects that might
             <li>Older Android</li>
             <li>Older iOS</li>
             <li>Opera Mobile</li>
+            <li>No Javascript enabled</li>
             <li>etc</li>
           </ul>
+        </section>
+
+        <section>
+          <h3>Let's Develop It</h3>
+          <p class="left-align">You should already have Modernizr built into your template, let's use it!</p>
+
+            <ul>
+              <li>Inspect the &lt;body&gt; element to see what classes it has</li>
+              <li>Write styles using the .js class and the .no-js class so that your toggle navigation is styled with and without Javascript enabled</li>
+              <li>Test by turning off JS in your browser (hint: <a target="_blank" href="https://chrome.google.com/webstore/detail/quick-javascript-switcher/geddoclleiomckbhadiaipdggiiccfje?hl=en">useful Chrome plugin</a> makes this easy)</li>
+              <li><span class="green">BONUS!</span> Write styles using the .mediaqueries class or .nomediaqueries class to create fallbacks for IE. To do this, you'll have to <a href="http://modernizr.com/download/">add a new custom Modernizr</a> script to your page.</li>
+            </ul>
         </section>
 
         <!-- -->
